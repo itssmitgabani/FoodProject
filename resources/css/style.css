@@ -7,30 +7,34 @@ html,
 body{
     background-color: #fff;
     color: #555;
-    font-family: sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
 }
 header{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/hero.jpg');
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; 
 }
 .hero-text-box{
     position: absolute;
     top: 50%;
     left: 50%;
     width: 1140px;
-    transform: translate(-60%,-50%);
+    transform: translate(-50%,-50%);
 }
 h1{
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
-    font-size: 200%;
+    font-size: 240%;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -46,6 +50,7 @@ input[type=submit]{
     border-radius: 200px;
     border: 1px solid #e67e22;
     transition: background-color 0.2s,border 0.2s,color 0.2s;
+    font-weight: 300;
 }
 .btn-full:link,
 .btn-full:visited,
@@ -66,11 +71,11 @@ input[type=submit]{
 .btn-full:hover,
 .btn-full:active,
 input[type=submit]{
-    border: 1 px solid #cf6d17;
+    border: 1px solid #cf6d17;
 }
 .btn-ghost:hover,
 .btn-ghost:active{
-    border: 1 px solid #cf6d17;
+    border: 1px solid #cf6d17;
     color: #fff;
 }
 .logo{
@@ -78,13 +83,13 @@ input[type=submit]{
     width: auto;
     float: left;
     margin-top: 20px;
-    margin-left: 95px;
+    /* margin-left: 95px; */
 }
 .main-nav{
     float: right;
     list-style: none;
     margin-top: 55px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 .main-nav li{
     display: inline-block;
@@ -97,15 +102,15 @@ input[type=submit]{
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
-    padding: 8px ;
+    padding: 8px 0;
     transition: border-bottom 0.2s;
 }
 .main-nav li a:hover,
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
 }
-.section-features{
-    padding: 80px 80px;
+section{
+    padding: 80px 0;
 }
 h2{
     font-weight: 300;
@@ -129,7 +134,7 @@ h2::after{
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
-    font-size: 90%;
+    /* font-size: 90%; */
     margin-bottom: 30px;
 }
 .box{
@@ -151,8 +156,18 @@ h3{
     color: #e67e22;
     margin-bottom: 10px;
 }
-.clear{
+ .clear{
     clear: both;
+} 
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
 .meals-showcase{
     list-style: none;
@@ -168,7 +183,7 @@ h3{
     margin: 0;
     overflow: hidden;
     background-color: #000;
-    transition: transform 0.5s , opacity 0.5s;
+    transition: transform 0.5s,opacity 0.5s;
 }
 .meal-photo img{
     width: 100%;
@@ -177,12 +192,12 @@ h3{
     opacity: 0.7;
 }
 .meal-photo img:hover{
-    transform: scale(1);
+    transform: scale(1.03);
     opacity: 1;
 }
 .section-meals{
     padding: 0;
-}
+}  
 .works-steps{
     margin-bottom: 50px;
     margin-right: 25px;
@@ -208,8 +223,8 @@ h3{
     width: 55px;
     text-align: center;
     padding: 5px;
-    font-size: 130%;
-    float: left;
+    font-size: 150%;
+    /* float: left; */
     margin-right: 25px;
 }
 .works-steps:last-of-type{
@@ -242,6 +257,7 @@ h3{
     text-align: center;
     color: #e67e22;
     line-height: 120%;
+    font-size: 120%;
     vertical-align: middle;
     margin-top: -5px;
     margin-right: 10px;
@@ -257,12 +273,12 @@ a:hover,
 a:active{
     color: #555;
     border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s , color 0.5s;
+    transition: border-bottom 0.5s,color 0.5s;
 }
 .section-testimonials{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(img/back-customers.jpg) ;
-    height: 75vh;
-    background-position: center;
+    /* height: 75vh; */
+    /* background-position: center; */
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
@@ -272,12 +288,12 @@ blockquote{
     padding: 2%;
     line-height: 145%;
     margin-top: 40px;
-    position: relative;
+    position: relative; 
 }
 cite{
     font-size: 90%;
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 cite img{
     height: 45px;
@@ -295,7 +311,7 @@ blockquote::before{
 }
 .section-plan{
     background-color: #f4f4f4;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .plan-box{
     background-color: #fff;
@@ -358,7 +374,7 @@ footer{
     background-color: #333;
     font-size: 80%;
     padding: 50px;
-    margin-top: 50%;
+    /* margin-top: 50%; */
 }
 .footer-nav{
     list-style: none;
@@ -405,5 +421,5 @@ footer p{
 }
 .social-links li a:link,
 .social-links li a:visited{
-    font-size: 140%;
+    font-size: 160%;
 }
